@@ -570,14 +570,14 @@
 
   /* ── Black text override for all product page elements ──────────────── */
   .product-information,
-  .product-information *,
+  .product-information *:not(.pack-save-badge):not(.pack-save-badge *):not(.complete-routine__discount-badge):not(.complete-routine__discount-badge *):not(.qv-gallery__badge):not(.qv-gallery__badge *):not(.cdr-routine__discount-badge):not(.cdr-routine__discount-badge *),
   .product-details,
-  .product-details *,
+  .product-details *:not(.pack-save-badge):not(.pack-save-badge *):not(.complete-routine__discount-badge):not(.complete-routine__discount-badge *):not(.qv-gallery__badge):not(.qv-gallery__badge *):not(.cdr-routine__discount-badge):not(.cdr-routine__discount-badge *),
   .product-details p,
-  .product-details span,
+  .product-details span:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.qv-gallery__badge):not(.cdr-routine__discount-badge),
   .product-details a,
   .product-details label,
-  .product-details div,
+  .product-details div:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.qv-gallery__badge):not(.cdr-routine__discount-badge),
   .product-details h1,
   .product-details h2,
   .product-details h3,
@@ -615,6 +615,11 @@
   .product-details .shopify-payment-button__button:hover * {
     color: #ffffff !important;
     fill: #ffffff !important;
+  }
+
+  /* Force the cart icon body inside add to cart button to stay empty (only path stroked) */
+  .product-details .add-to-cart-button svg path {
+    fill: none !important;
   }
 }
 </style>
