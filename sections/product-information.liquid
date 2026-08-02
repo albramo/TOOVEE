@@ -570,14 +570,14 @@
 
   /* ── Black text override for all product page elements ──────────────── */
   .product-information,
-  .product-information *,
+  .product-information *:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.complete-routine__add-all-btn):not(.complete-routine__add-all-btn *):not(.product-card__discount-badge):not(.rec-card__discount-badge):not(.product-card__badge--sale):not(.add-to-cart__added):not(.add-to-cart__added-icon):not(.add-to-cart-text__content):not(.add-to-cart-text__content *):not(.complete-routine__btn):not(.complete-routine__btn *),
   .product-details,
-  .product-details *,
-  .product-details p,
-  .product-details span,
-  .product-details a,
+  .product-details *:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.complete-routine__add-all-btn):not(.complete-routine__add-all-btn *):not(.product-card__discount-badge):not(.rec-card__discount-badge):not(.product-card__badge--sale):not(.add-to-cart__added):not(.add-to-cart__added-icon):not(.add-to-cart-text__content):not(.add-to-cart-text__content *):not(.complete-routine__btn):not(.complete-routine__btn *),
+  .product-details p:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.complete-routine__add-all-btn):not(.complete-routine__add-all-btn *):not(.product-card__discount-badge):not(.rec-card__discount-badge):not(.product-card__badge--sale),
+  .product-details span:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.complete-routine__add-all-btn):not(.complete-routine__add-all-btn *):not(.product-card__discount-badge):not(.rec-card__discount-badge):not(.product-card__badge--sale),
+  .product-details a:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.complete-routine__add-all-btn):not(.complete-routine__add-all-btn *):not(.product-card__discount-badge):not(.rec-card__discount-badge):not(.product-card__badge--sale),
   .product-details label,
-  .product-details div,
+  .product-details div:not(.pack-save-badge):not(.complete-routine__discount-badge):not(.complete-routine__add-all-btn):not(.complete-routine__add-all-btn *):not(.product-card__discount-badge):not(.rec-card__discount-badge):not(.product-card__badge--sale),
   .product-details h1,
   .product-details h2,
   .product-details h3,
@@ -652,10 +652,10 @@
   .product-details .product-card__badge--sale,
   .product-details product-price .product-card__badge--sale,
   .product-details .product-card__badge *,
-  .pack-save-badge,
-  .pack-save-badge *,
-  .complete-routine__discount-badge,
-  .complete-routine__discount-badge * {
+  .product-details .pack-save-badge,
+  .product-details .pack-save-badge *,
+  .product-details .complete-routine__discount-badge,
+  .product-details .complete-routine__discount-badge * {
     color: #ffffff !important;
   }
 }
