@@ -1232,11 +1232,12 @@
   }
 
   .menu-drawer__utility-links {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin-block: auto var(--padding-sm);
-    margin-inline-start: var(--padding-xl);
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin-top: auto !important; /* Force push to the absolute bottom of the drawer */
+    margin-bottom: 0 !important;
+    margin-inline-start: 0 !important;
   }
 
   .menu-drawer__account {
@@ -1667,7 +1668,7 @@
     align-items: center !important;
     padding: 16px 20px 24px !important;
     width: 100% !important;
-    margin-top: auto !important; /* Pushes to absolute bottom of flex container */
+    margin-top: 0 !important; /* Positioned directly below the utility links */
     border-top: 1px solid rgba(0, 0, 0, 0.04) !important;
     box-sizing: border-box !important;
   }
