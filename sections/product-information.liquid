@@ -698,6 +698,20 @@
   .complete-routine__btn:hover span * {
     color: #2e0808 !important;
   }
+
+  /* Beautiful rounded corners for product media images on mobile screens */
+  @media screen and (max-width: 749px) {
+    media-gallery .product-media-container,
+    media-gallery .product-media-container img,
+    media-gallery .product-media-container video,
+    media-gallery .product-media-container iframe,
+    media-gallery .product-media-container deferred-media,
+    media-gallery .product-media-container .product-media,
+    media-gallery .product-media-container .product-media__image {
+      border-radius: 16px !important;
+      overflow: hidden !important;
+    }
+  }
 }
 </style>
 
