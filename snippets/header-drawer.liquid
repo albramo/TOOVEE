@@ -886,8 +886,7 @@
 
   .menu-drawer,
   details[open] > .menu-drawer__submenu {
-    transition: transform var(--drawer-animation-speed) ease, visibility var(--drawer-animation-speed) ease,
-      opacity var(--drawer-animation-speed) ease;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s ease, opacity 0.45s ease !important;
   }
 
   .menu-open > .menu-drawer,
@@ -1011,9 +1010,8 @@
   }
 
   .menu-drawer-container[open] .menu-drawer__animated-element {
-    animation: menu-drawer-nav-open var(--drawer-animation-speed) ease-in-out;
-    animation-delay: calc(var(--drawer-animation-speed) + (var(--menu-drawer-animation-index) - 1) * 0.1s);
-    animation-fill-mode: backwards;
+    animation: tovee-fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(0.15s + var(--menu-drawer-animation-index) * 0.04s);
   }
 
   .menu-drawer__menu accordion-custom .details-content--no-animation {
@@ -1270,17 +1268,17 @@
     border-radius: var(--menu-image-border-radius);
   }
 
-  @keyframes menu-drawer-nav-open {
+  @keyframes tovee-fade-up {
     0% {
       visibility: hidden;
       opacity: 0;
-      transform: translateX(-0.5rem);
+      transform: translateY(12px);
     }
 
     100% {
       visibility: visible;
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
