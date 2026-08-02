@@ -587,34 +587,72 @@
     color: #000000 !important;
   }
 
-  /* ── Add to Cart & Buy Now Buttons (page buttons only, not sticky bar) ── */
-  /* Default: White background, Black text, Brand border */
-  .product-details .add-to-cart-button,
-  .product-details .shopify-payment-button__button {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+  /* ── Add to Cart Button (Default solid brand background, white text) ── */
+  .product-details .add-to-cart-button {
+    background-color: #2e0808 !important;
+    color: #ffffff !important;
     border: 1.5px solid #2e0808 !important;
     transition: background-color 0.25s ease, color 0.25s ease !important;
   }
 
-  .product-details .add-to-cart-button *,
-  .product-details .shopify-payment-button__button * {
-    color: #000000 !important;
-    fill: #000000 !important;
+  .product-details .add-to-cart-button * {
+    color: #ffffff !important;
+    fill: #ffffff !important;
   }
 
-  /* Hover: Brand color background, White text */
-  .product-details .add-to-cart-button:hover,
+  /* Add to Cart Hover: White background, brand text */
+  .product-details .add-to-cart-button:hover {
+    background-color: #ffffff !important;
+    color: #2e0808 !important;
+    border-color: #2e0808 !important;
+  }
+
+  .product-details .add-to-cart-button:hover * {
+    color: #2e0808 !important;
+    fill: #2e0808 !important;
+  }
+
+  /* ── Buy Now Button (Default white background, brand text & border) ── */
+  .product-details .shopify-payment-button__button {
+    background-color: #ffffff !important;
+    color: #2e0808 !important;
+    border: 1.5px solid #2e0808 !important;
+    transition: background-color 0.25s ease, color 0.25s ease !important;
+  }
+
+  .product-details .shopify-payment-button__button * {
+    color: #2e0808 !important;
+    fill: #2e0808 !important;
+  }
+
+  /* Buy Now Hover: Solid brand background, white text */
   .product-details .shopify-payment-button__button:hover {
     background-color: #2e0808 !important;
     color: #ffffff !important;
     border-color: #2e0808 !important;
   }
 
-  .product-details .add-to-cart-button:hover *,
   .product-details .shopify-payment-button__button:hover * {
     color: #ffffff !important;
     fill: #ffffff !important;
+  }
+
+  /* Ensure the cart icon in buttons remains empty/hollow like the one in the header */
+  .add-to-cart-button svg path,
+  .sticky-add-to-cart__button svg path,
+  .product-details .add-to-cart-button svg path,
+  .complete-routine__btn svg path,
+  .add-to-cart-icon svg path,
+  .add-to-cart-icon path {
+    fill: none !important;
+  }
+
+  /* Ensure product details discount/sale badge text is always white */
+  .product-details .product-card__badge,
+  .product-details .product-card__badge--sale,
+  .product-details product-price .product-card__badge--sale,
+  .product-details .product-card__badge * {
+    color: #ffffff !important;
   }
 }
 </style>
