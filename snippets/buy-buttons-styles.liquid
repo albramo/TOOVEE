@@ -332,30 +332,37 @@
     --product-btn-brand-text: var(--color-primary-button-hover-text);
   }
 
-  .product-details .buy-buttons-block .add-to-cart-button:is(.button, .button-secondary),
-  .product-details .buy-buttons-block .accelerated-checkout-block button.shopify-payment-button__button--unbranded {
-    --button-background-color: #ffffff;
-    --button-color: var(--product-btn-brand);
-    --button-border-color: var(--product-btn-brand-hover);
+  /* Add to Cart: Solid brand background (#2e0808) with white text, dark hover background */
+  .product-details .buy-buttons-block .add-to-cart-button:is(.button, .button-secondary) {
+    --button-background-color: #2e0808;
+    --button-color: #ffffff;
+    --button-border-color: #2e0808;
     --button-border-width: 1.5px;
   }
 
-  .product-details .buy-buttons-block .add-to-cart-button:is(.button, .button-secondary):hover:not(:disabled),
-  .product-details
-    .buy-buttons-block
-    .accelerated-checkout-block
-    button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
-    --button-background-color: var(--product-btn-brand-hover);
-    --button-color: var(--product-btn-brand-text);
-    --button-border-color: var(--product-btn-brand-hover);
+  .product-details .buy-buttons-block .add-to-cart-button:is(.button, .button-secondary):hover:not(:disabled) {
+    --button-background-color: #4a3a3a;
+    --button-color: #ffffff;
+    --button-border-color: #4a3a3a;
   }
 
   .product-details .buy-buttons-block .add-to-cart-button:is(.button, .button-secondary):hover:not(:disabled) .svg-wrapper,
-  .product-details
-    .buy-buttons-block
-    .add-to-cart-button:is(.button, .button-secondary):hover:not(:disabled)
-    .add-to-cart-text {
-    color: var(--product-btn-brand-text);
+  .product-details .buy-buttons-block .add-to-cart-button:is(.button, .button-secondary):hover:not(:disabled) .add-to-cart-text {
+    color: #ffffff !important;
+  }
+
+  /* Buy Now (Shopify Payment Button): White background with brand border/text, solid brand on hover */
+  .product-details .buy-buttons-block .accelerated-checkout-block button.shopify-payment-button__button--unbranded {
+    --button-background-color: #ffffff;
+    --button-color: #2e0808;
+    --button-border-color: #2e0808;
+    --button-border-width: 1.5px;
+  }
+
+  .product-details .buy-buttons-block .accelerated-checkout-block button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+    --button-background-color: #2e0808;
+    --button-color: #ffffff;
+    --button-border-color: #2e0808;
   }
 
   /* Product page: quantity selector ~2x add-to-cart button scale */
