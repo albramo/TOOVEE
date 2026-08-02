@@ -18,6 +18,17 @@
                       loading: 'lazy'
                   }}
                 </a>
+              {% elsif settings.logo != blank %}
+                <a href="{{ routes.root_url }}" class="tovee-footer__logo-link" aria-label="{{ shop.name }}">
+                  {{
+                    settings.logo
+                    | image_url: width: block.settings.logo_width | default: 180
+                    | image_tag:
+                      class: 'tovee-footer__logo',
+                      alt: shop.name,
+                      loading: 'lazy'
+                  }}
+                </a>
               {% else %}
                 <a href="{{ routes.root_url }}" class="tovee-footer__wordmark">{{ shop.name }}</a>
               {% endif %}

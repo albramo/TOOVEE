@@ -739,6 +739,19 @@
         </div>
       </div>
 
+      <!-- Dynamic shop logo at the bottom center of the mobile sidebar drawer -->
+      {%- if settings.logo != blank -%}
+        <div class="menu-drawer__bottom-logo">
+          <a href="{{ routes.root_url }}" class="menu-drawer__bottom-logo-link">
+            {{ settings.logo | image_url: width: 240 | image_tag: class: 'menu-drawer__logo-img', alt: shop.name }}
+          </a>
+        </div>
+      {%- else -%}
+        <div class="menu-drawer__bottom-logo">
+          <span class="menu-drawer__bottom-logo-text">{{ shop.name }}</span>
+        </div>
+      {%- endif -%}
+
     </div>
     <div
       class="menu-drawer__backdrop"
@@ -1647,5 +1660,41 @@
     display: inline-block !important;
     vertical-align: middle !important;
     flex-shrink: 0 !important;
+  }
+
+  /* Mobile Sidebar Bottom Logo styles */
+  .menu-drawer__bottom-logo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 16px 20px 24px !important;
+    width: 100% !important;
+    margin-top: auto !important; /* Pushes to absolute bottom of flex container */
+    border-top: 1px solid rgba(0, 0, 0, 0.04) !important;
+    box-sizing: border-box !important;
+  }
+
+  .menu-drawer__bottom-logo-link {
+    display: block !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .menu-drawer__logo-img {
+    max-height: 45px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .menu-drawer__bottom-logo-text {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: var(--color-brand-mahogany, #2e0808) !important;
+    font-family: var(--font-heading--family) !important;
+    font-style: italic !important;
   }
 {% endstylesheet %}
