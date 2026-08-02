@@ -658,6 +658,46 @@
   .product-details .complete-routine__discount-badge * {
     color: #ffffff !important;
   }
+
+  /* Enforce white text for all Add to Cart buttons and their contents (including nested spans) */
+  .product-details .add-to-cart-button,
+  .product-details .add-to-cart-button *,
+  .product-details .add-to-cart-button span,
+  .product-details .add-to-cart-button span *,
+  .sticky-add-to-cart__button,
+  .sticky-add-to-cart__button *,
+  .sticky-add-to-cart__button span,
+  .sticky-add-to-cart__button span *,
+  .complete-routine__btn,
+  .complete-routine__btn *,
+  .complete-routine__btn span,
+  .complete-routine__btn span * {
+    color: #ffffff !important;
+  }
+
+  /* Hover states for Add to Cart page buttons (reverses to brand dark/border) */
+  .product-details .add-to-cart-button:hover,
+  .product-details .add-to-cart-button:hover *,
+  .product-details .add-to-cart-button:hover span,
+  .product-details .add-to-cart-button:hover span * {
+    color: #2e0808 !important;
+  }
+
+  /* Hover states for sticky add to cart buttons (reverses to brand dark) */
+  .sticky-add-to-cart__button:hover,
+  .sticky-add-to-cart__button:hover *,
+  .sticky-add-to-cart__button:hover span,
+  .sticky-add-to-cart__button:hover span * {
+    color: #2e0808 !important;
+  }
+
+  /* Hover states for complete routine buttons (reverses to brand dark) */
+  .complete-routine__btn:hover,
+  .complete-routine__btn:hover *,
+  .complete-routine__btn:hover span,
+  .complete-routine__btn:hover span * {
+    color: #2e0808 !important;
+  }
 }
 </style>
 
